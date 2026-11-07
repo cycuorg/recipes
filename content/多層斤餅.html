@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta property="head" content="H1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>多層斤餅</title>
+
+<link rel="stylesheet" href="./../static/chimper/fonts/icomoon/style.css">
+<link rel="stylesheet" href="./../static/chimper/css/bootstrap.min.css">
+<link rel="stylesheet" href="./../static/chimper/css/magnific-popup.css">
+<link rel="stylesheet" href="./../static/chimper/css/jquery-ui.css">
+<link rel="stylesheet" href="./../static/chimper/css/owl.carousel.min.css">
+<link rel="stylesheet" href="./../static/chimper/css/owl.theme.default.min.css">
+<link rel="stylesheet" href="./../static/chimper/css/bootstrap-datepicker.css">
+<link rel="stylesheet" href="./../static/chimper/fonts/flaticon/font/flaticon.css">
+<link rel="stylesheet" href="./../static/chimper/css/aos.css">
+<link rel="stylesheet" href="./../static/chimper/css/style.css">
+<link rel="shortcut icon" href="./../static/favicons.png">
+
+<style type="text/css">
+.site-section { background-color: #FFFF; padding: 40px 40px; }
+body > div > div.dropdown.open { display: block; }
+img.add_border { border: 3px solid blue; }
+
+.page-navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 20px;
+    margin: 24px 0;
+    padding: 12px 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.page-navigation .previous {
+    flex: 1 1 50%;
+    min-width: 0;
+    margin-right: auto;
+    text-align: left;
+}
+
+.page-navigation .next {
+    flex: 1 1 50%;
+    min-width: 0;
+    margin-left: auto;
+    text-align: right;
+}
+
+.page-navigation a {
+    display: inline-block;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.page-navigation a:hover {
+    text-decoration: underline;
+}
+</style>
+
+<script src="./../static/chimper/js/jquery-3.3.1.min.js"></script>
+<link rel="stylesheet" href="./../static/tipuesearch/css/normalize.min.css">
+<script src="./../static/tipuesearch/tipuesearch_set.js"></script>
+<script src="tipuesearch_content.js"></script>
+<link rel="stylesheet" href="./../static/tipuesearch/css/tipuesearch.css">
+<script src="./../static/tipuesearch/tipuesearch.js"></script>
+
+<script>
+function doSearch() {
+    if (window.jQuery && jQuery.fn.tipuesearch) {
+        jQuery('#tipue_search_input').tipuesearch({
+            newWindow: true,
+            minimumLength: 2,
+            wholeWords: false
+        });
+    }
+}
+
+if (window.jQuery) {
+    jQuery(document).ready(doSearch);
+}
+</script>
+
+<script type="text/javascript" src="./../static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushBash.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushDiff.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushPowerShell.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushMojo.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushWbt.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushDart.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushRust.js"></script>
+<link type="text/css" rel="stylesheet" href="./../static/syntaxhighlighter/css/shCoreDefault.css">
+<style>
+pre, pre code, .syntaxhighlighter .line, .syntaxhighlighter table td.code .line {
+  white-space: pre !important; word-wrap: normal !important; word-break: normal !important;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+<div class="site-wrap">
+
+<div class="site-mobile-menu">
+  <div class="site-mobile-menu-header">
+    <div class="site-mobile-menu-close mt-3">
+      <span class="icon-close2 js-menu-toggle"></span>
+    </div>
+  </div>
+  <div class="site-mobile-menu-body"></div>
+</div>
+
+<header class="site-navbar py-4 bg-white" role="banner">
+  <div class="container">
+    <div class="row align-items-center">
+      <h1>Recipe</h1>
+
+      <div class="pl-4">
+        <form action="#" onsubmit="return false;">
+          <input type="text"
+                 placeholder="Search"
+                 name="q"
+                 id="tipue_search_input"
+                 pattern=".{2,}"
+                 title="At least 2 characters">
+        </form>
+      </div>
+
+      <div class="col-12 col-md-10 d-none d-xl-block">
+        <nav class="site-navigation position-relative text-right" role="navigation">
+          <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
+<li class="active has-children">
+<a href="index.html">Home</a>
+<ul class="dropdown">
+<li><a href="sitemap.html">SMap</a></li>
+</ul>
+</li>
+<li><a href="About.html">About</a></li>
+<li><a href="麵包.html">麵包</a></li>
+<li><a href="捲餅.html">捲餅</a></li>
+<li><a href="多層斤餅.html">多層斤餅</a></li>
+</ul>
+
+        </nav>
+      </div>
+
+      <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3"
+           style="position: relative; top: 3px;">
+        <a href="#" class="site-menu-toggle js-menu-toggle text-black">
+          <span class="icon-menu h3"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div id="tipue_search_content">
+<h1>多層斤餅</h1>
+<nav class="page-navigation" aria-label="Page navigation">
+<div class="previous">&lt;&lt; <a href="捲餅.html">Previous: 捲餅</a></div>
+<div class="next"></div>
+</nav>
+
+<p>多層燙麵／半燙麵斤餅，主要是利用熱水燙麵與冷水和麵的比例，搭配油酥、抹油及反覆摺疊擀製，製作出外層酥香、內層柔軟，而且具有多層次口感的斤餅。</p>
+<p>如果是要做餐廳或麵食店使用的斤餅，建議先掌握「半燙麵」與「全燙麵」兩種做法，再比較成品差異。</p>
+<h4>一、斤餅的兩種麵糰配方</h4>
+<h4>1. 半燙麵斤餅（推薦）</h4>
+<p>半燙麵是將一部分麵粉用熱水燙熟，另一部分用冷水揉合。</p>
+<p>優點：</p>
+<ul>
+<li>麵糰柔軟、有韌性。</li>
+<li>擀製時不容易破皮。</li>
+<li>層次明顯，內部柔軟。</li>
+<li>放涼後仍保有一定柔軟度。</li>
+<li>適合做多層斤餅及蔥抓餅類產品。</li>
+</ul>
+<p>烙饼用烫面、半烫面还是冷水面？教你正确做法，筋道柔软凉了不硬_面团_方法_步骤</p>
+<h4>半燙麵材料比例</h4>
+<p>以下以中筋麵粉 1000 克為基準：</p>
+<table>
+<thead>
+<tr>
+<th>材料</th>
+<th>重量</th>
+<th>麵粉百分比</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>中筋麵粉</td>
+<td>1000克</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>95°C熱水</td>
+<td>350克</td>
+<td>35%</td>
+</tr>
+<tr>
+<td>常溫冷水</td>
+<td>250克</td>
+<td>25%</td>
+</tr>
+<tr>
+<td>鹽</td>
+<td>10克</td>
+<td>1%</td>
+</tr>
+<tr>
+<td>沙拉油</td>
+<td>20克</td>
+<td>2%</td>
+</tr>
+</tbody>
+</table>
+<p>總加水率60%熱水與冷水比例：</p>
+<ul>
+<li>熱水：350克</li>
+<li>冷水：250克</li>
+<li>熱水占總水量約58.3%</li>
+<li>冷水占總水量約41.7%</li>
+</ul>
+<p>這個比例適合製作有韌性、又能做出層次的斤餅。</p>
+<h4>2. 全燙麵斤餅</h4>
+<p>全燙麵是全部使用熱水與麵粉混合，使麵粉中的澱粉部分糊化。</p>
+<p>烙饼用烫面、半烫面还是冷水面？教你正确做法，筋道柔软凉了不硬_面团_方法_步骤</p>
+<h4>全燙麵材料比例</h4>
+<p>以中筋麵粉1000克為基準：</p>
+<table>
+<thead>
+<tr>
+<th>材料</th>
+<th>重量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>中筋麵粉</td>
+<td>1000克</td>
+</tr>
+<tr>
+<td>90～95°C熱水</td>
+<td>550～600克</td>
+</tr>
+<tr>
+<td>鹽</td>
+<td>10克</td>
+</tr>
+<tr>
+<td>沙拉油</td>
+<td>20克</td>
+</tr>
+</tbody>
+</table>
+<p>特性：</p>
+<ul>
+<li>麵糰非常柔軟。</li>
+<li>延展性好。</li>
+<li>成品比較軟，不太有嚼勁。</li>
+<li>冷卻後容易偏硬或失去彈性。</li>
+<li>適合柔軟型燙麵餅，但不一定適合追求酥脆、分明層次的斤餅。</li>
+</ul>
+<p>我的建議：若目標是傳統餐廳多層斤餅，優先採用半燙麵。</p>
+<h4>二、多層斤餅的油酥配方</h4>
+<p>斤餅的層次，除了麵糰之外，最重要的就是油酥。</p>
+<p>油酥的作用是讓麵皮之間形成油脂隔離層，煎熟後就會產生一層一層的口感。</p>
+<h4>油酥材料（麵粉1000克配方）</h4>
+<table>
+<thead>
+<tr>
+<th>材料</th>
+<th>重量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>中筋麵粉</td>
+<td>100克</td>
+</tr>
+<tr>
+<td>沙拉油</td>
+<td>150克</td>
+</tr>
+<tr>
+<td>豬油</td>
+<td>50克</td>
+</tr>
+<tr>
+<td>鹽</td>
+<td>8克</td>
+</tr>
+<tr>
+<td>五香粉</td>
+<td>2克（可不加）</td>
+</tr>
+<tr>
+<td>白胡椒粉</td>
+<td>1克（可不加）</td>
+</tr>
+</tbody>
+</table>
+<h4>油酥製作方法</h4>
+<ol>
+<li>沙拉油與豬油加熱至約120～140°C。</li>
+<li>將熱油倒入麵粉中。</li>
+<li>一邊倒油，一邊攪拌。</li>
+<li>加入鹽、五香粉及白胡椒粉。</li>
+<li>攪拌成均勻、可以塗抹的糊狀。</li>
+<li>放涼備用。</li>
+</ol>
+<p>注意：油酥不能太稀，否則容易流出；也不能太乾，否則擀製時容易破壞層次。</p>
+<p>如果希望成品較清爽，可以全部使用沙拉油；如果希望香氣濃郁，則可提高豬油比例。</p>
+<h4>三、多層斤餅詳細製作程序</h4>
+<p>以下以半燙麵1000克麵粉的配方示範。</p>
+<h4>第一步：熱水燙麵</h4>
+<ol>
+<li>將1000克麵粉放入攪拌盆。</li>
+<li>先取350克熱水，水溫約95°C。</li>
+<li>熱水分次倒入麵粉。</li>
+<li>用筷子快速攪拌。</li>
+<li>讓麵粉形成大小不一的絮狀物。</li>
+<li>不需要全部攪拌成團。</li>
+</ol>
+<p>這個步驟的重點是讓部分麵粉糊化，降低麵糰的筋性。</p>
+<h4>第二步：加入冷水揉麵</h4>
+<ol>
+<li>等燙麵稍微降溫。</li>
+<li>加入250克常溫水。</li>
+<li>加入10克鹽。</li>
+<li>開始攪拌。</li>
+<li>再加入20克沙拉油。</li>
+<li>揉成完整麵糰。</li>
+</ol>
+<p>揉麵時間：</p>
+<ul>
+<li>手揉：約12～15分鐘。</li>
+<li>攪拌機：約8～10分鐘，依機器及速度調整。</li>
+</ul>
+<p>麵糰完成標準：</p>
+<ul>
+<li>表面光滑。</li>
+<li>不黏手。</li>
+<li>有延展性。</li>
+<li>拉開時不會立即斷裂。</li>
+</ul>
+<h4>第三步：第一次醒麵</h4>
+<p>將麵糰放入盆中，表面稍微抹油，蓋上保鮮膜。</p>
+<p>醒麵時間：</p>
+<ul>
+<li>室溫25～28°C：約30～40分鐘。</li>
+<li>冬天較冷時：約40～60分鐘。</li>
+</ul>
+<p>醒麵的目的，是讓麵筋放鬆，後續擀製比較容易。</p>
+<h4>第四步：分割麵糰</h4>
+<p>將麵糰分成每個250～300克。</p>
+<p>建議：</p>
+<table>
+<thead>
+<tr>
+<th>單個重量</th>
+<th>成品大小</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200克</td>
+<td>小型斤餅</td>
+</tr>
+<tr>
+<td>250克</td>
+<td>中型斤餅</td>
+</tr>
+<tr>
+<td>300克</td>
+<td>大型斤餅</td>
+</tr>
+<tr>
+<td>350克</td>
+<td>厚實大型斤餅</td>
+</tr>
+</tbody>
+</table>
+<p>分割後滾圓，表面抹少許油，再醒麵15～20分鐘。</p>
+<h4>第五步：擀開及塗抹油酥</h4>
+<p>烙饼时 直接烙是大错特错 多加这一步 饼柔软起层 凉了也不硬 ＊ 阿波罗新闻网</p>
+<ol>
+<li>取一個麵糰。</li>
+<li>桌面抹少量油。</li>
+<li>將麵糰擀成長方形薄片。</li>
+<li>厚度約1.5～2毫米。</li>
+<li>均勻塗抹油酥。</li>
+<li>四周保留約1公分，不要塗太滿。</li>
+</ol>
+<p>油酥用量：</p>
+<p>每個250克麵糰，約使用35～45克油酥。</p>
+<h4>第六步：摺疊製作多層結構</h4>
+<p>這個步驟是斤餅層次的關鍵。</p>
+<p>方法A：扇形摺疊法（推薦）</p>
+<ol>
+<li>將塗好油酥的長方形麵皮像摺扇子一樣，來回摺疊。</li>
+<li>摺成長條狀。</li>
+<li>將長條輕輕拉長。</li>
+<li>從一端開始捲起。</li>
+<li>捲成圓形螺旋狀。</li>
+<li>將尾端壓在底部。</li>
+<li>靜置15～20分鐘。</li>
+</ol>
+<p>這樣就能形成多層結構。</p>
+<p>方法B：三折法</p>
+<ol>
+<li>麵皮擀成長方形。</li>
+<li>塗抹油酥。</li>
+<li>左側往中間摺。</li>
+<li>右側再往中間摺。</li>
+<li>再次擀開。</li>
+<li>重複一次三折。</li>
+<li>最後捲成圓形。</li>
+</ol>
+<p>這種方式也能形成層次，但摺疊次數和擀製力道要控制好，避免把油酥擠出來。</p>
+<h4>第七步：最後擀製</h4>
+<ol>
+<li>將捲好的麵糰放置15分鐘。</li>
+<li>用擀麵棍從中心向外擀。</li>
+<li>擀成直徑約22～26公分。</li>
+<li>厚度約3～5毫米。</li>
+<li>力道要均勻。</li>
+<li>不要過度擀壓，否則容易破壞層次。</li>
+</ol>
+<h4>第八步：煎製斤餅</h4>
+<p>建議使用平底鍋或鐵板。</p>
+<p>煎製程序：</p>
+<ol>
+<li>平底鍋預熱至約160～180°C。</li>
+<li>鍋面刷薄薄一層油。</li>
+<li>放入斤餅。</li>
+<li>中小火煎約2～3分鐘。</li>
+<li>底面呈金黃色後翻面。</li>
+<li>另一面再煎約2～3分鐘。</li>
+<li>視餅的厚度調整時間。</li>
+<li>煎至兩面金黃、內部熟透。</li>
+</ol>
+<p>最後可以用鍋鏟輕輕拍打餅面，幫助層次鬆開。</p>
+<h4>四、半燙麵與全燙麵成品差異</h4>
+<table>
+<thead>
+<tr>
+<th>比較項目</th>
+<th>半燙麵</th>
+<th>全燙麵</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>麵糰筋性</td>
+<td>中等</td>
+<td>低</td>
+</tr>
+<tr>
+<td>延展性</td>
+<td>好</td>
+<td>很好</td>
+</tr>
+<tr>
+<td>操作性</td>
+<td>好</td>
+<td>較黏軟</td>
+</tr>
+<tr>
+<td>層次表現</td>
+<td>明顯</td>
+<td>較不明顯</td>
+</tr>
+<tr>
+<td>外層口感</td>
+<td>酥香</td>
+<td>柔軟</td>
+</tr>
+<tr>
+<td>內部口感</td>
+<td>柔韌</td>
+<td>軟糯</td>
+</tr>
+<tr>
+<td>冷卻後口感</td>
+<td>較佳</td>
+<td>容易變硬</td>
+</tr>
+<tr>
+<td>適合用途</td>
+<td>多層斤餅</td>
+<td>柔軟燙麵餅</td>
+</tr>
+</tbody>
+</table>
+<h4>五、製作多層斤餅最重要的五個技術</h4>
+<ol>
+<li>熱水溫度： 建議95°C左右，讓部分麵粉充分燙熟。</li>
+<li>加水比例： 半燙麵總水量約60%，可依麵粉吸水性調整。</li>
+<li>醒麵時間： 一定要充分醒麵，否則擀製容易回縮。</li>
+<li>油酥厚薄： 必須均勻，不宜過厚或過薄。</li>
+<li>摺疊方式： 扇形摺疊後捲成螺旋，是製作多層斤餅很實用的方法。</li>
+</ol>
+<h4>六、我建議的餐廳商用標準配方</h4>
+<p>如果要做出外層酥、內部柔軟、可以一層一層撕開的斤餅，可以先採用以下標準：</p>
+<h4>商用半燙麵多層斤餅</h4>
+<p>建議試作配方麵粉</p>
+<h4>1000g</h4>
+<p>總水量</p>
+<h4>600g</h4>
+<p>熱水</p>
+<p>350g</p>
+<p>冷水</p>
+<p>250g</p>
+<p>鹽</p>
+<p>10g</p>
+<p>揉麵用油</p>
+<p>20g</p>
+<p>油酥</p>
+<ul>
+<li>沙拉油150克</li>
+<li>豬油50克</li>
+<li>麵粉100克</li>
+<li>鹽8克</li>
+</ul>
+<p>製作規格</p>
+<ul>
+<li>每個麵糰：250克</li>
+<li>油酥：35～45克</li>
+<li>成品直徑：22～26公分</li>
+<li>摺疊：扇形摺疊後螺旋捲起</li>
+</ul>
+<p>這兩種斤餅雖然都是以麵粉、水為主要材料，但製作原理、麵糰筋性、加水比例、擀製方式及熟成方法都不一樣。</p>
+<ul>
+<li>A. 北京烤鴨薄斤餅： 重點是薄、軟、Q、有彈性，能包住烤鴨、蔥段及甜麵醬，不容易破裂。</li>
+<li>B. 傳統多層酥香斤餅： 重點是層次分明、外酥內軟、可以一層一層撕開，麵香與油酥香氣明顯。</li>
+</ul>
+<p>以下分別提供以中筋麵粉1000克為基準的配方，包含材料比例、製作程序、火候及商用操作重點。</p>
+<h4>A. 北京烤鴨薄斤餅</h4>
+<h4>一、成品特色</h4>
+<p>北京烤鴨薄斤餅與一般多層酥餅最大的差別是：</p>
+<ol>
+<li>不需要油酥。</li>
+<li>不需要大量摺疊。</li>
+<li>主要依靠麵筋延展性形成柔軟薄皮。</li>
+<li>透過兩片麵皮中間抹油、疊合擀製，再分開形成薄餅。</li>
+<li>蒸熟後應該柔軟、富有彈性，而且可以輕鬆剝開。</li>
+</ol>
+<p>這種做法也稱為雙片合擀法。</p>
+<h4>二、材料比例</h4>
+<p>推薦配方：半燙麵版本以中筋麵粉1000克計算：</p>
+<table>
+<thead>
+<tr>
+<th>材料</th>
+<th>重量</th>
+<th>麵粉百分比</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>中筋麵粉</td>
+<td>1000克</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>90～95°C熱水</td>
+<td>300克</td>
+<td>30%</td>
+</tr>
+<tr>
+<td>常溫水</td>
+<td>280克</td>
+<td>28%</td>
+</tr>
+<tr>
+<td>鹽</td>
+<td>8克</td>
+<td>0.8%</td>
+</tr>
+<tr>
+<td>沙拉油</td>
+<td>10克</td>
+<td>1%</td>
+</tr>
+</tbody>
+</table>
+<p>總加水量580克，總加水率58%。</p>
+<p>這個比例的特點是：</p>
+<ul>
+<li>有一定筋性。</li>
+<li>麵皮延展性佳。</li>
+<li>擀薄時不容易破裂。</li>
+<li>蒸熟後柔軟有彈性。</li>
+</ul>
+<p>水量可以視麵粉吸水性增減20～30克。</p>
+<h4>三、製作程序</h4>
+<h4>步驟1：熱水燙麵</h4>
+<p>烫面怎么和面图解，烫面和面的方法及小窍门</p>
+<ol>
+<li>中筋麵粉1000克放入攪拌盆。</li>
+<li>將300克熱水加熱至90～95°C。</li>
+<li>分次倒入麵粉。</li>
+<li>一邊倒水，一邊使用筷子攪拌。</li>
+<li>讓麵粉形成均勻的雪花狀。</li>
+<li>靜置約5～10分鐘，讓溫度稍微下降。</li>
+</ol>
+<p>注意：不要將所有麵粉都燙成黏稠的麵糊，保留部分麵粉的筋性，有助於後續擀薄。</p>
+<h4>步驟2：加入冷水及揉麵</h4>
+<ol>
+<li>加入280克常溫水。</li>
+<li>加入8克鹽。</li>
+<li>開始揉麵。</li>
+<li>麵糰大致成形後加入10克沙拉油。</li>
+<li>持續揉至表面光滑。</li>
+</ol>
+<p>揉麵時間：</p>
+<ul>
+<li>手揉約12～15分鐘。</li>
+<li>攪拌機約8～10分鐘，視機器調整。</li>
+</ul>
+<p>完成的麵糰應該柔軟、光滑，具有延展性。</p>
+<h4>步驟3：醒麵</h4>
+<p>手工蔥油餅 - 食譜自由配 - 自由電子報</p>
+<p><a href="https://food.ltn.com.tw/article/8947?utm_source=chatgpt.com">food.ltn.com.tw</a></p>
+<p>將麵糰蓋好，避免表面乾燥。</p>
+<ul>
+<li>第一次醒麵：30分鐘。</li>
+<li>分割滾圓後：再醒麵15～20分鐘。</li>
+</ul>
+<p>醒麵非常重要。</p>
+<p>如果醒麵不足，麵糰會產生回縮現象，擀出來的餅容易厚薄不均。</p>
+<h4>步驟4：分割麵糰</h4>
+<p>建議每個麵糰分割為：</p>
+<table>
+<thead>
+<tr>
+<th>每個麵糰重量</th>
+<th>適合尺寸</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>20克</td>
+<td>小型薄餅</td>
+</tr>
+<tr>
+<td>25克</td>
+<td>標準薄餅</td>
+</tr>
+<tr>
+<td>30克</td>
+<td>稍大薄餅</td>
+</tr>
+</tbody>
+</table>
+<p>如果是餐廳搭配烤鴨使用，我建議先以每個25克測試。</p>
+<p>將分割好的麵糰滾圓，表面抹少許油，再醒麵10～15分鐘。</p>
+<h4>步驟5：雙片合擀法</h4>
+<p>這是北京烤鴨薄斤餅最重要的技術。</p>
+<ol>
+<li>取兩個25克小麵糰。</li>
+<li>分別壓成小圓餅。</li>
+<li>在其中一片表面刷薄薄一層沙拉油。</li>
+<li>將另一片疊在上面。</li>
+<li>用手輕壓，使兩片麵皮貼合。</li>
+<li>用擀麵棍從中心向外擀。</li>
+<li>不斷轉動麵皮，使其均勻變薄。</li>
+<li>最後擀成直徑約16～18公分的圓形。</li>
+</ol>
+<p>注意：</p>
+<ul>
+<li>中間的油不能太少，否則蒸熟後不好剝開。</li>
+<li>也不能太多，否則容易滑動、厚薄不均。</li>
+<li>兩片麵皮邊緣必須對齊。</li>
+</ul>
+<h4>步驟6：蒸製</h4>
+<p>建議使用蒸籠。</p>
+<ol>
+<li>蒸籠水先煮滾。</li>
+<li>將擀好的雙片麵皮放入蒸籠。</li>
+<li>大火蒸約3～4分鐘。</li>
+<li>麵皮熟透後取出。</li>
+<li>稍微放涼。</li>
+<li>沿著邊緣將兩片分開。</li>
+</ol>
+<p>如果一次蒸製很多片，建議每一片都要適當撒粉或使用防沾墊紙，避免生麵皮互相黏住。</p>
+<h4>步驟7：成品保存</h4>
+<ul>
+<li>蒸熟後趁溫熱分開。</li>
+<li>用乾淨布或保鮮膜覆蓋，避免乾燥。</li>
+<li>短時間供餐可保溫保存。</li>
+<li>冷藏保存時應密封，使用前重新蒸熱。</li>
+<li>不建議長時間暴露在室溫下。</li>
+</ul>
+<h4>四、北京烤鴨薄斤餅的品質標準</h4>
+<h4>理想成品</h4>
+<ul>
+<li>顏色：乳白色。</li>
+<li>厚度：均勻、薄透。</li>
+<li>口感：柔軟、略帶Q度。</li>
+<li>延展性：包烤鴨時不易破裂。</li>
+<li>剝離性：兩片容易分開，不會黏成一團。</li>
+</ul>
+<h4>B. 傳統多層酥香斤餅</h4>
+<p>這種斤餅與北京烤鴨薄餅完全不同。</p>
+<p>它的核心在於：</p>
+<ul>
+<li>半燙麵製作柔軟麵糰。</li>
+<li>使用油酥隔離麵皮。</li>
+<li>透過摺疊產生多層結構。</li>
+<li>利用豬油或沙拉油增加酥香。</li>
+<li>透過煎製形成外酥內軟的口感。</li>
+</ul>
+<h4>一、材料比例</h4>
+<p>以中筋麵粉1000克為基準。</p>
+<h4>1. 主麵糰配方</h4>
+<p>推薦半燙麵配方| 材料 | 重量 | 麵粉百分比 | | --- | --- | --- | | 中筋麵粉 | 1000克 | 100% | | 95°C熱水 | 350克 | 35% | | 常溫水 | 250克 | 25% | | 鹽 | 10克 | 1% | | 沙拉油 | 20克 | 2% |</p>
+<p>總水量600克，加水率60%。</p>
+<p>這個比例比較適合多層斤餅，因為麵糰不會太硬，也保留一定筋性。</p>
+<h4>2. 油酥配方</h4>
+<table>
+<thead>
+<tr>
+<th>材料</th>
+<th>重量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>中筋麵粉</td>
+<td>120克</td>
+</tr>
+<tr>
+<td>沙拉油</td>
+<td>150克</td>
+</tr>
+<tr>
+<td>豬油</td>
+<td>50克</td>
+</tr>
+<tr>
+<td>鹽</td>
+<td>10克</td>
+</tr>
+<tr>
+<td>五香粉</td>
+<td>2克</td>
+</tr>
+<tr>
+<td>白胡椒粉</td>
+<td>1克</td>
+</tr>
+</tbody>
+</table>
+<p>這份油酥可以做出明顯油酥香氣。</p>
+<p>如果不喜歡五香味，可以將五香粉及白胡椒粉省略。</p>
+<h4>二、製作程序</h4>
+<h4>步驟1：熱水燙麵</h4>
+<ol>
+<li>1000克中筋麵粉放入攪拌盆。</li>
+<li>350克熱水加熱至95°C左右。</li>
+<li>分次倒入麵粉。</li>
+<li>使用筷子攪拌成雪花狀。</li>
+<li>靜置5～10分鐘。</li>
+</ol>
+<p>這個步驟讓部分麵粉糊化，降低麵糰筋性，使成品較柔軟。</p>
+<h4>步驟2：加入冷水揉麵</h4>
+<ol>
+<li>加入250克常溫水。</li>
+<li>加入10克鹽。</li>
+<li>攪拌至麵糰形成。</li>
+<li>加入20克沙拉油。</li>
+<li>揉至表面光滑。</li>
+</ol>
+<p>揉好的麵糰應該是柔軟、不黏手、可以延展的狀態。</p>
+<h4>步驟3：第一次醒麵</h4>
+<p>將麵糰放在盆內，表面抹少量油。</p>
+<p>蓋上保鮮膜。</p>
+<p>醒麵30～40分鐘。</p>
+<h4>步驟4：製作油酥</h4>
+<ol>
+<li>將150克沙拉油及50克豬油放入鍋內。</li>
+<li>加熱至約120～140°C。</li>
+<li>將120克麵粉放入耐熱容器。</li>
+<li>將熱油慢慢倒入麵粉。</li>
+<li>一邊倒，一邊攪拌。</li>
+<li>加入10克鹽。</li>
+<li>加入五香粉及白胡椒粉。</li>
+<li>攪拌成細緻油酥。</li>
+<li>放涼備用。</li>
+</ol>
+<p>油酥應該呈現可以均勻塗抹的膏狀。</p>
+<p>如果太稀，可增加少量麵粉；如果太乾，可補少量油脂。</p>
+<h4>步驟5：分割麵糰</h4>
+<p>建議每個麵糰重量：</p>
+<table>
+<thead>
+<tr>
+<th>重量</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200克</td>
+<td>小型斤餅</td>
+</tr>
+<tr>
+<td>250克</td>
+<td>標準斤餅</td>
+</tr>
+<tr>
+<td>300克</td>
+<td>大型斤餅</td>
+</tr>
+</tbody>
+</table>
+<p>建議先以250克為標準。</p>
+<p>分割滾圓後，醒麵15～20分鐘。</p>
+<h4>步驟6：擀開麵糰</h4>
+<ol>
+<li>桌面抹少量油。</li>
+<li>將麵糰壓平。</li>
+<li>使用擀麵棍擀開。</li>
+<li>擀成長方形。</li>
+<li>厚度約1.5～2毫米。</li>
+<li>表面均勻塗抹油酥。</li>
+</ol>
+<p>每個250克麵糰建議使用35～45克油酥。</p>
+<p>四周保留約1公分，避免油酥在摺疊時大量擠出。</p>
+<h4>步驟7：扇形摺疊法</h4>
+<p>這是我最推薦的多層斤餅製作方式。</p>
+<ol>
+<li>將塗好油酥的長方形麵皮放平。</li>
+<li>從一端開始，像摺扇子一樣來回摺疊。</li>
+<li>每一摺約2～3公分寬。</li>
+<li>摺成長條。</li>
+<li>輕輕拉長，但不要拉破。</li>
+<li>從一端開始捲成螺旋圓形。</li>
+<li>將尾端壓在底部。</li>
+<li>靜置15～20分鐘。</li>
+</ol>
+<p>這種方式可以使麵皮形成多層油酥結構。</p>
+<h4>步驟8：第二次擀製</h4>
+<ol>
+<li>將螺旋狀麵糰翻面。</li>
+<li>用手掌輕壓。</li>
+<li>從中心向外擀開。</li>
+<li>擀成直徑22～26公分。</li>
+<li>厚度約3～5毫米。</li>
+<li>擀製時力道要均勻。</li>
+</ol>
+<p>切記不要太用力。</p>
+<p>如果將麵糰擀得太薄，容易使油酥層破裂，層次會不明顯。</p>
+<h4>步驟9：煎製</h4>
+<p>煎製是決定酥香口感的關鍵。</p>
+<ol>
+<li>平底鍋預熱。</li>
+<li>鍋面刷少量油。</li>
+<li>放入斤餅。</li>
+<li>使用中小火煎製。</li>
+<li>約2～3分鐘翻面。</li>
+<li>另一面再煎約2～3分鐘。</li>
+<li>兩面呈現金黃色即可。</li>
+<li>出鍋後用手或鍋鏟輕拍餅面，使層次鬆開。</li>
+</ol>
+<p>建議鍋面溫度約160～180°C，並依餅的厚度調整火力及時間。</p>
+<h4>三、多層斤餅的三種油酥比例</h4>
+<p>油酥的比例會直接影響成品的酥脆度。</p>
+<p>以下是以每個250克麵糰為基準：</p>
+<table>
+<thead>
+<tr>
+<th>口感目標</th>
+<th>油酥用量</th>
+<th>特性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>柔軟型</td>
+<td>25～30克</td>
+<td>油脂較少、內部柔軟</td>
+</tr>
+<tr>
+<td>酥香型</td>
+<td>35～45克</td>
+<td>層次明顯、外酥內軟</td>
+</tr>
+<tr>
+<td>濃酥型</td>
+<td>50～55克</td>
+<td>油香濃郁、較酥脆</td>
+</tr>
+</tbody>
+</table>
+<p>我最推薦35～45克。</p>
+<h4>四、如何讓斤餅真正一層一層撕開？</h4>
+<p>這裡有幾個技術重點：</p>
+<p>1. 油酥要均勻</p>
+<p>油酥塗抹不均，會造成有些地方黏在一起，有些地方層次太油。</p>
+<p>2. 摺疊不能太緊</p>
+<p>扇形摺疊時不要過度壓實，否則層與層之間容易黏合。</p>
+<p>3. 醒麵不能省略</p>
+<p>摺疊後靜置15～20分鐘，讓麵筋放鬆，擀製時比較不會破壞層次。</p>
+<p>4. 煎製不能使用太大火</p>
+<p>火力太大，外面很快焦黑，內部卻還沒熟透。</p>
+<p>5. 出鍋後輕拍</p>
+<p>利用輕拍讓煎熟的麵皮層次鬆開。</p>
+<h4>五、A與B兩種斤餅配方比較</h4>
+<table>
+<thead>
+<tr>
+<th>比較項目</th>
+<th>A 北京烤鴨薄斤餅</th>
+<th>B 多層酥香斤餅</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>麵糰</td>
+<td>半燙麵</td>
+<td>半燙麵</td>
+</tr>
+<tr>
+<td>加水率</td>
+<td>約58%</td>
+<td>約60%</td>
+</tr>
+<tr>
+<td>油酥</td>
+<td>不使用</td>
+<td>使用</td>
+</tr>
+<tr>
+<td>製作方法</td>
+<td>雙片合擀</td>
+<td>扇形摺疊</td>
+</tr>
+<tr>
+<td>熟成方式</td>
+<td>蒸</td>
+<td>煎</td>
+</tr>
+<tr>
+<td>成品厚度</td>
+<td>極薄</td>
+<td>3～5毫米</td>
+</tr>
+<tr>
+<td>口感</td>
+<td>柔軟Q彈</td>
+<td>外酥內軟</td>
+</tr>
+<tr>
+<td>主要用途</td>
+<td>包烤鴨</td>
+<td>單獨食用、夾肉</td>
+</tr>
+</tbody>
+</table>
+<h4>六、商用製作時，我建議特別注意的事情</h4>
+<p>如果要在餐廳使用，兩種斤餅都可以先製作生胚，再依照供餐需求處理。</p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>A 北京薄斤餅</th>
+<th>B 多層斤餅</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>建議生胚</td>
+<td>雙片合擀</td>
+<td>摺疊後螺旋捲起</td>
+</tr>
+<tr>
+<td>最後成形</td>
+<td>薄圓片</td>
+<td>圓形餅胚</td>
+</tr>
+<tr>
+<td>主要熟製</td>
+<td>蒸</td>
+<td>平底鍋煎</td>
+</tr>
+<tr>
+<td>冷藏</td>
+<td>密封防乾</td>
+<td>分片防沾</td>
+</tr>
+<tr>
+<td>冷凍</td>
+<td>建議先試驗品質</td>
+<td>可測試生胚冷凍</td>
+</tr>
+</tbody>
+</table>
+<p>生胚冷凍時，建議先以少量測試解凍後的延展性、層次及成品口感，再確定量產流程。</p>
+<h4>七、我另外建議你做一個配方實驗</h4>
+<p>同樣是1000克麵粉，可以測試三種不同的加水比例，找出最適合你的麵粉及成品口感。</p>
+<h4>斤餅配方比例試算</h4>
+<p>選擇製作種類</p>
+<p>A. 北京烤鴨薄斤餅</p>
+<p>B B. 傳統多層酥香斤餅</p>
+<p>調整總加水率</p>
+<p>58%（較有筋性）</p>
+<p>60 60%（標準柔軟度）</p>
+<p>62%（較柔軟）</p>
+<p>1000克麵粉的總水量</p>
+<h4>600 克</h4>
+<p>熱水 350克</p>
+<p>冷水 250克</p>
+<p>此為試算參考值，A的熱水固定300克，B固定350克；水量變動時調整冷水。</p>
+<nav class="page-navigation" aria-label="Page navigation">
+<div class="previous">&lt;&lt; <a href="捲餅.html">Previous: 捲餅</a></div>
+<div class="next"></div>
+</nav>
+<script>
+(function(){
+  function restorePreNewlines(){
+    var nodes=document.querySelectorAll('pre');
+    for(var i=0;i<nodes.length;i++){
+      var pre=nodes[i], html=pre.innerHTML;
+      if(!html) continue;
+      var fixed=html.replace(/<br\s*\/?\s*(?:\s[^>]*)?>/gi,'\n').replace(/\r\n/g,'\n').replace(/\r/g,'\n');
+      if(fixed!==html) pre.innerHTML=fixed;
+    }
+  }
+  function run(){
+    restorePreNewlines();
+    if(!window.SyntaxHighlighter) return;
+    try{
+      if(SyntaxHighlighter.config){ SyntaxHighlighter.config.bloggerMode=true; SyntaxHighlighter.config.stripBrs=false; }
+      if(typeof SyntaxHighlighter.all==='function') SyntaxHighlighter.all();
+    }catch(e){}
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',run,{once:true});
+  else run();
+})();
+</script>
+</div><!-- /tipue_search_content -->
+
+<div class="container">
+  <div class="row pt-3 mx-auto">
+    <p>
+      Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+      All rights reserved |
+      <i class="icon-heart" aria-hidden="true"></i>
+      by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+    </p>
+  </div>
+</div>
+
+</div><!-- /site-wrap -->
+
+<script src="./../static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+<script src="./../static/chimper/js/jquery-ui.js"></script>
+<script src="./../static/chimper/js/popper.min.js"></script>
+<script src="./../static/chimper/js/bootstrap.min.js"></script>
+<script src="./../static/chimper/js/owl.carousel.min.js"></script>
+<script src="./../static/chimper/js/jquery.stellar.min.js"></script>
+<script src="./../static/chimper/js/jquery.countdown.min.js"></script>
+<script src="./../static/chimper/js/jquery.magnific-popup.min.js"></script>
+<script src="./../static/chimper/js/bootstrap-datepicker.min.js"></script>
+<script src="./../static/chimper/js/aos.js"></script>
+<script src="./../static/chimper/js/main.js"></script>
+</body>
+</html>
